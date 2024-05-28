@@ -3,33 +3,126 @@
 {% load static %}
 
 {% block meta %}
-{% include 'navbar.html' %}
+
 {% endblock meta %}
 
 {% block content %}
 <style>
-#header {
-    background-color: #AED6F1;
-    margin-bottom: 20px; 
-    padding: 10px;
+    .bg-custom-blue {
+        background-color: #2874A6 ; /* Contoh warna biru */
+    }
+
+    #header {
+        background-color: #AED6F1;
+        margin-bottom: 20px; 
+        padding: 10px;
+    }
+
+    .display-3 {
+        margin-bottom: 20px; /* Menambahkan jarak di bawah judul */
+    }
+
+    .lead {
+        margin-top: 20px; /* Menambahkan jarak di atas paragraf */
+    }
+
+    .card {
+    height: 100%;
 }
 
-.display-3 {
-    margin-bottom: 20px; /* Menambahkan jarak di bawah judul */
+.img-container {
+    overflow: hidden;
+    height: 100%; /* Tinggi gambar setara dengan tinggi card */
 }
 
-.lead {
-    margin-top: 20px; /* Menambahkan jarak di atas paragraf */
+.card-img {
+    width: 100%;
+    height: 100%; /* Tinggi gambar setara dengan tinggi card */
+    object-fit: cover;
 }
 
+.card-body {
+    height: 100%;
+    padding: 1rem; /* Jarak dari tepi card */
+}
+
+.card-title,
+.card-text {
+    overflow-wrap: break-word;
+}
 
 </style>
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom-blue p-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Kelompok 6</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item">
+            <a class="nav-link mx-2" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2 active" href="/game">Game</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-2" href="/video">Video</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
 
 <section id="header" class="jumbotron text-center">
     <h1 class="display-3 mb-4">SMAN 68 JAKARTA</h1>
     <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
         ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</section>
+
+<section id="gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <div class="img-container">
+                                <img src="https://assets.ggwp.id/2023/04/sejarah-game-flappy-bird-2.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Flappy Bird</h5>
+                                <p class="card-text">Terbanglah bersama Flappy Bird, mengendalikan burung kecil dengan sekali ketukan layar! Hindari pipa-pipa menantang dan kalahkan teman-teman dengan skor tertinggi Anda. Siapkah Anda untuk menaklukkan langit dalam permainan yang menantang ini? Ayo mainkan Flappy Bird sekarang dan buktikan kemampuan Anda!</p>
+                                <a href="/game/flappy" class="btn btn-primary">Mainkan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <div class="img-container">
+                                <img src="https://i.pinimg.com/474x/bf/86/5d/bf865db5e159361b27877c1b50236bd8.jpg" alt="" class="card-img">
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Bulls Eye</h5>
+                                <p class="card-text">Uji Keterampilan Memanah Anda! Bulls Eye Archery membawa sensasi memanah langsung ke layar Anda. Tarik panah, bidik sasaran, dan raih Bulls Eye! Grafis SVG yang memukau membuat pengalaman memanah semakin mendebarkan. Siapkan diri Anda untuk tantangan terbesar!</p>
+                                <a href="/game/bulls-eye" class="btn btn-primary">Mainkan Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
  
 {% endblock content %}

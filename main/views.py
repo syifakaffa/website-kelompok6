@@ -46,9 +46,28 @@ def show_main(request):
     return render(request, 'main.html', {'members': members})
 
 def show_game(request):
-    context={}
-    return render(request, 'game.html', context)
+    games = [
+        {
+            'nama': 'Flappy Bird',
+            'deskripsi': 'Terbanglah bersama Flappy Bird, mengendalikan burung kecil dengan sekali ketukan layar! Hindari pipa-pipa menantang dan kalahkan teman-teman dengan skor tertinggi Anda. Rasakan ketegangan yang intens seiring berjalannya waktu dan nikmati keseruan yang adiktif. Siapkah Anda untuk menaklukkan langit dalam permainan yang menantang ini? Ayo mainkan Flappy Bird sekarang dan buktikan kemampuan Anda!',
+            'img_url': 'https://assets.ggwp.id/2023/04/sejarah-game-flappy-bird-2.jpg'
+        },
+        {
+            'nama': 'Bulls Eye',
+            'deskripsi': 'Uji Keterampilan Memanah Anda! Bulls Eye Archery membawa sensasi memanah langsung ke layar Anda. Tarik panah, bidik sasaran, dan raih Bulls Eye! Grafis SVG yang memukau membuat pengalaman memanah semakin mendebarkan. Siapkan diri Anda untuk tantangan terbesar!',
+            'img_url': 'https://i.pinimg.com/474x/30/8d/61/308d61626cc060d580acd57f3dc24b4f.jpg'
+        }
+    ]
+    return render(request, 'game.html', {'games': games})
 
 def show_video(request):
     context={}
-    return render(request, 'game.html', context)
+    return render(request, 'video.html', context)
+
+def show_flappy(request):
+    context={}
+    return render(request, 'flappy.html', context)
+
+def show_bulls_eye(request):
+    context={}
+    return render(request, 'bulls_eye.html', context)
