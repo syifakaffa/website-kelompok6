@@ -8,7 +8,8 @@ def show_main(request):
             'hobi': 'Berteori',
             'motivasi': '"Akan ada saatnya anak mama ini jadi pemain profesional"',
             'instagram': '@alfonsodestephanus',
-            'img_url': 'static/images/garra2.jpeg'
+            'img_url': 'static/images/garra2.jpeg',
+            'ig':'https://www.instagram.com/alfonsodestephanus/'
         },
         {
             'nama': 'Alfarel Rafeliano',
@@ -16,7 +17,8 @@ def show_main(request):
             'hobi': 'Badminton,game,denger musik,menghayal berdua dengan Adel',
             'motivasi': '"Terus menghayal hingga hanyalan itu menjadi nyata"',
             'instagram': '@alfarellll_',
-            'img_url': 'static/images/alvaarel.jpeg'
+            'img_url': 'static/images/alvaarel.jpeg',
+            'ig': 'https://www.instagram.com/alfarellll_/'
         },
         {
             'nama': 'Satria Abdillah Akbar',
@@ -24,7 +26,17 @@ def show_main(request):
             'hobi': 'Nonton Anime, Denger musik, Hunting Anime Di dunia nyata',
             'motivasi': '"Terkadang Menjadi Wibu bukanlah Hal yang buruk"',
             'instagram': '@sabdibar1.0',
-            'img_url': 'static/images/satria.jpeg'
+            'img_url': 'static/images/satria.jpeg',
+            'ig':'https://www.instagram.com/sabdibar1.0/'
+        },
+        {
+            'nama': 'Frizzy Robyan Ilham',
+            'tanggal_lahir': '14-04-2008',
+            'hobi': 'Mainin bola bukan hati orang',
+            'motivasi': '"Jangan menyerah dan terus berjuang kawan."',
+            'instagram': '@frizzyrobyanilham',
+            'img_url': 'static/images/frizzi.jpeg',
+            'ig':'https://www.instagram.com/frizzyrobyanilham/'
         },
         {
             'nama': 'Muhammad Ali',
@@ -32,15 +44,8 @@ def show_main(request):
             'hobi': 'Main basket, game,denger musik,berharap kamu balik lagi ke aku padahal gabisa',
             'motivasi': '"Lakukan apa yang kamu sukai dan kejarlah apa yang kamu impikan"',
             'instagram': '@liiialiiiii10',
-            'img_url': 'static/images/ali2.jpeg'
-        },
-        {
-            'nama': 'Frizzy Robyan Ilham',
-            'tanggal_lahir': '14-04-2008',
-            'hobi': 'Mainin bola bukan hati orang',
-            'motivasi': '"Terkadang Menjadi Wibu bukanlah Hal yang buruk"',
-            'instagram': '@frizzyrobyanilham',
-            'img_url': 'static/images/frizzi.jpeg'
+            'img_url': 'static/images/ali2.jpeg',
+            'ig': 'https://www.instagram.com/liiialiiii10/'
         }
     ]
     return render(request, 'main.html', {'members': members})
